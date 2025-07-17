@@ -1,0 +1,19 @@
+{
+  "instructions": [
+    {
+      "icon": "👆",
+      "title": "Tap to Color",
+      "description": "Simply tap on any area of the drawing to fill it with your selected color. It's that easy!"
+    },
+    {
+      "icon": "🎨",
+      "title": "Choose Your Palette",
+      "description": "Select from our beautiful color palettes or create your own custom combinations."
+    },
+    {
+      "icon": "🔄",
+      "title": "Undo & Redo",
+      "description": "Made a mistake? Use the undo button to go back, or redo to restore your changes."
+    }
+  ]
+}

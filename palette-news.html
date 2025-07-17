@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stay updated with the latest news, updates, and art diaries from Tap to Color. Discover new features, game updates, and creative inspiration."
+    />
+    <link rel="icon" href="public/favicon.ico" />
+    <title>News - Tap to Color: Painting Book | usepayots.com</title>
+    <link rel="stylesheet" href="css/paint-styles.css" />
+    <link rel="stylesheet" href="css/color-animations.css" />
+  </head>
+  <body>
+    <div id="paint-header-placeholder"></div>
+
+    <main class="splash-page">
+      <!-- Hero Section -->
+      <section class="news-hero">
+        <div class="news-hero-background">
+          <div class="news-hero-overlay">
+            <div class="canvas-container">
+              <div class="news-hero-content">
+                <div class="news-hero-text">
+                  <h1 class="news-hero-title">Palette News & Updates</h1>
+                  <p class="news-hero-subtitle">
+                    Discover the latest features, creative inspiration, and
+                    exciting updates that make your coloring journey even more
+                    magical
+                  </p>
+                  <div class="news-hero-features">
+                    <div class="news-feature">
+                      <span class="news-icon">✨</span>
+                      <span>Latest Features</span>
+                    </div>
+                    <div class="news-feature">
+                      <span class="news-icon">🎨</span>
+                      <span>Creative Inspiration</span>
+                    </div>
+                    <div class="news-feature">
+                      <span class="news-icon">📱</span>
+                      <span>App Updates</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-updates-section">
+        <div class="canvas-container">
+          <div class="news-updates-panel">
+            <div class="news-updates-header">
+              <h2 class="news-updates-title">Game Updates</h2>
+              <p class="news-updates-description">
+                Stay up to date with the latest features, improvements, and
+                exciting new content that enhances your coloring experience.
+              </p>
+            </div>
+            <div id="updates-content" class="news-updates-layout">
+              <!-- Content will be loaded from JSON -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-diaries-section">
+        <div class="canvas-container">
+          <div class="news-diaries-panel">
+            <div class="news-diaries-header">
+              <h2 class="news-diaries-title">Art Diaries</h2>
+              <p class="news-diaries-description">
+                Discover inspiring stories from artists and creators who found
+                their creative voice through the art of coloring.
+              </p>
+            </div>
+            <div id="diaries-content" class="news-diaries-layout">
+              <!-- Content will be loaded from JSON -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="paint-footer-placeholder"></div>
+
+    <script src="js/paint-loader.js"></script>
+    <script src="js/color-animations.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      title="Scroll to top"
+    ></button>
+
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Show button when user scrolls down 300px
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

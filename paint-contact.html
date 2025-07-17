@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with us! Share your thoughts, ideas, and feedback about Tap to Color. We'd love to hear from you and create something amazing together."
+    />
+    <link rel="icon" href="public/favicon.ico" />
+    <title>Contact Us - Tap to Color: Painting Book | usepayots.com</title>
+    <link rel="stylesheet" href="css/paint-styles.css" />
+    <link rel="stylesheet" href="css/color-animations.css" />
+  </head>
+  <body>
+    <div id="paint-header-placeholder"></div>
+
+    <main class="splash-page">
+      <!-- Hero Section -->
+      <section class="news-hero">
+        <div class="news-hero-background">
+          <div class="news-hero-overlay">
+            <div class="canvas-container">
+              <div class="news-hero-content">
+                <div class="news-hero-text">
+                  <h1 class="news-hero-title">Get in Touch</h1>
+                  <p class="news-hero-subtitle">
+                    We'd love to hear from you! Share your thoughts, ideas, and
+                    feedback. Let's create something amazing together.
+                  </p>
+                  <div class="news-hero-features">
+                    <div class="news-feature">
+                      <span class="news-icon">📧</span>
+                      <span>Email Support</span>
+                    </div>
+                    <div class="news-feature">
+                      <span class="news-icon">📞</span>
+                      <span>Phone Contact</span>
+                    </div>
+                    <div class="news-feature">
+                      <span class="news-icon">📍</span>
+                      <span>Visit Us</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Map Section -->
+      <section class="contact-hero-section">
+        <div class="canvas-container">
+          <div class="contact-layout">
+            <div class="contact-form-panel">
+              <h2 class="form-title">Send us a Message</h2>
+              <form class="paint-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name-input" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    id="name-input"
+                    name="name"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone-input" class="form-label"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone-input"
+                    name="phone"
+                    class="form-input"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message-input" class="form-label">Message</label>
+                  <textarea
+                    id="message-input"
+                    name="message"
+                    class="form-textarea"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div class="contact-map-panel">
+              <h2 class="map-title">Visit Our Creative Hub</h2>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps?q=H‑Block,+Halishahar+Housing+Estate,+Chattogram,+Bangladesh&hl=en&z=15&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Info Cards Section -->
+      <section class="contact-info-section">
+        <div class="canvas-container">
+          <h2 class="contact-cards-title">Get in Touch</h2>
+          <div class="contact-info-layout">
+            <div class="contact-info-panel">
+              <div class="contact-card-icon">📧</div>
+              <h3 class="contact-card-title">Email Support</h3>
+              <p class="contact-card-text">Send us an email anytime</p>
+              <div class="contact-card-details">
+                <a href="mailto:hello@usepayots.com" class="contact-card-link"
+                  >hello@usepayots.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-info-panel">
+              <div class="contact-card-icon">📞</div>
+              <h3 class="contact-card-title">Phone Contact</h3>
+              <p class="contact-card-text">Call us during business hours</p>
+              <div class="contact-card-details">
+                <a href="tel:+8800000091482" class="contact-card-link"
+                  >+880 0000 091482</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-info-panel">
+              <div class="contact-card-icon">📍</div>
+              <h3 class="contact-card-title">Visit Us</h3>
+              <p class="contact-card-text">Drop by our creative hub</p>
+              <div class="contact-card-details">
+                <span class="contact-card-text"
+                  >H‑Block, Halishahar Housing Estate, Chattogram,
+                  Bangladesh</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="paint-footer-placeholder"></div>
+
+    <!-- Modal for form notification -->
+    <div id="contact-modal" class="contact-modal" style="display: none">
+      <div class="contact-modal-content">
+        <div id="contact-modal-message"></div>
+      </div>
+    </div>
+
+    <script src="js/paint-loader.js"></script>
+    <script src="js/color-animations.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      title="Scroll to top"
+    ></button>
+
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Show button when user scrolls down 300px
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
