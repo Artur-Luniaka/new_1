@@ -1,5 +1,6 @@
 /* CSS Variables - Thematic Color Palette */
 :root {
+  /* Primary Colors */
   --color-spark: #ff6b9d;
   --paint-smooth: #ffd93d;
   --tap-glow: #6bcf7f;
@@ -8,11 +9,50 @@
   --canvas-light: #f8f9fa;
   --ink-dark: #2c3e50;
   --paper-white: #ffffff;
-  --shadow-gentle: rgba(0, 0, 0, 0.1);
-  --shadow-deep: rgba(0, 0, 0, 0.2);
+
+  /* Secondary Colors */
   --border-soft: #e9ecef;
   --text-primary: #2c3e50;
   --text-secondary: #6c757d;
+
+  /* Gradient Colors */
+  --gradient-purple-start: #667eea;
+  --gradient-purple-end: #764ba2;
+  --gradient-gray-start: #ffffff;
+  --gradient-gray-end: #f0f0f0;
+
+  /* Shadow Colors */
+  --shadow-gentle: rgba(0, 0, 0, 0.1);
+  --shadow-deep: rgba(0, 0, 0, 0.2);
+  --shadow-darker: rgba(0, 0, 0, 0.3);
+  --shadow-darkest: rgba(0, 0, 0, 0.4);
+  --shadow-black-5: rgba(0, 0, 0, 0.5);
+  --shadow-black-6: rgba(0, 0, 0, 0.6);
+  --shadow-black-7: rgba(0, 0, 0, 0.7);
+  --shadow-black-8: rgba(0, 0, 0, 0.8);
+  --shadow-black-9: rgba(0, 0, 0, 0.9);
+
+  /* White Transparent Colors */
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-95: rgba(255, 255, 255, 0.95);
+  --white-100: rgba(255, 255, 255, 1);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-25: rgba(255, 255, 255, 0.25);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-05: rgba(255, 255, 255, 0.05);
+
+  /* Spark Color Transparent */
+  --spark-10: rgba(255, 107, 157, 0.1);
+  --spark-20: rgba(255, 107, 157, 0.2);
+  --spark-30: rgba(255, 107, 157, 0.3);
+
+  /* Ink Dark Transparent */
+  --ink-80: rgba(44, 62, 80, 0.8);
+  --ink-30: rgba(44, 62, 80, 0.3);
+
+  /* Gradients */
   --gradient-sunset: linear-gradient(
     135deg,
     var(--color-spark),
@@ -28,7 +68,35 @@
     var(--brush-warm),
     var(--color-spark)
   );
-  --gradient-tools: linear-gradient(135deg, #667eea, #764ba2);
+  --gradient-tools: linear-gradient(
+    135deg,
+    var(--gradient-purple-start),
+    var(--gradient-purple-end)
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--gradient-purple-start) 0%,
+    var(--gradient-purple-end) 100%
+  );
+  --gradient-gray: linear-gradient(
+    135deg,
+    var(--gradient-gray-start),
+    var(--gradient-gray-end)
+  );
+
+  /* Overlay Gradients */
+  --overlay-dark: linear-gradient(
+    135deg,
+    var(--shadow-black-7) 0%,
+    var(--shadow-black-5) 50%,
+    var(--shadow-black-7) 100%
+  );
+  --overlay-light: linear-gradient(
+    135deg,
+    var(--white-10) 0%,
+    var(--white-05) 100%
+  );
+  --overlay-spark: linear-gradient(135deg, var(--spark-10), var(--spark-10));
 }
 
 /* Reset and Base Styles */
@@ -241,7 +309,7 @@ body {
 
 /* Hero Section */
 .canvas-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-hero);
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -258,11 +326,11 @@ body {
 }
 
 .palette-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--white-95);
   border-radius: 20px;
   padding: 3rem;
   margin-top: 2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px var(--shadow-gentle);
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -312,13 +380,13 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-deep);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .app-preview-image:hover {
   transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 40px var(--shadow-darker);
 }
 
 .image-placeholder {
@@ -332,7 +400,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-deep);
 }
 
 .placeholder-icon {
@@ -360,7 +428,7 @@ body {
   background: var(--gradient-sunset);
   border-radius: 25px;
   padding: 3rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px var(--shadow-gentle);
   color: var(--paper-white);
   text-align: center;
 }
@@ -380,7 +448,7 @@ body {
 .paint-description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-90);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -392,10 +460,10 @@ body {
 }
 
 .color-cards-row .paint-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--white-95);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px var(--shadow-gentle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1;
   max-width: 400px;
@@ -405,7 +473,7 @@ body {
 
 .color-cards-row .paint-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px var(--shadow-deep);
 }
 
 .color-cards-row .paint-card h3 {
@@ -429,12 +497,7 @@ body {
 }
 
 .tutorial-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  background: var(--overlay-dark);
   padding: 4rem 2rem;
   min-height: 500px;
   display: flex;
@@ -459,10 +522,10 @@ body {
 }
 
 .tutorial-cards .instruction-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--white-95);
   border-radius: 20px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px var(--shadow-deep);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1;
   min-width: 280px;
@@ -473,7 +536,7 @@ body {
 
 .tutorial-cards .instruction-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px var(--shadow-darker);
 }
 
 .tutorial-cards .instruction-card h3 {
@@ -517,7 +580,7 @@ body {
   background: var(--gradient-sunset);
   border-radius: 20px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px var(--shadow-gentle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   color: var(--paper-white);
@@ -532,17 +595,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: var(--overlay-light);
   pointer-events: none;
 }
 
 .reviews-grid .feedback-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 35px var(--shadow-black-5);
 }
 
 .reviews-grid .feedback-stars {
@@ -564,7 +623,7 @@ body {
 
 .reviews-grid .feedback-author {
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-90);
   font-weight: 600;
   font-size: 1rem;
   position: relative;
@@ -596,7 +655,7 @@ body {
   background: var(--gradient-nature);
   border-radius: 25px;
   padding: 3rem 2.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px var(--shadow-gentle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1;
   max-width: 550px;
@@ -612,17 +671,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: var(--overlay-light);
   pointer-events: none;
 }
 
 .world-gradient-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 40px var(--shadow-black-5);
 }
 
 .world-card-title {
@@ -638,7 +693,7 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-90);
   position: relative;
   z-index: 1;
 }
@@ -651,8 +706,8 @@ body {
 }
 
 .world-tag {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--white-20);
+  border: 1px solid var(--white-30);
   border-radius: 25px;
   padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
@@ -665,7 +720,7 @@ body {
 }
 
 .world-tag:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--white-30);
   transform: translateY(-2px);
 }
 
@@ -711,7 +766,7 @@ body {
   background: var(--gradient-tools);
   border-radius: 25px;
   padding: 3rem 2rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px var(--shadow-gentle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 300px;
   text-align: center;
@@ -727,11 +782,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: var(--overlay-light);
   pointer-events: none;
 }
 
@@ -743,7 +794,7 @@ body {
 
 .tool-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 40px var(--shadow-black-5);
 }
 
 .brush-icon,
@@ -784,7 +835,7 @@ body {
 }
 
 .tool-card p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-90);
   line-height: 1.6;
   font-size: 1.1rem;
   position: relative;
@@ -812,11 +863,11 @@ body {
 .footer-block {
   flex: 1;
   min-width: 250px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--white-10);
   backdrop-filter: blur(10px);
   padding: 1rem;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--white-20);
 }
 
 .footer-heading {

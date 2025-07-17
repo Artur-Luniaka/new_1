@@ -253,14 +253,14 @@
 
 /* Text Glow Effect */
 .color-title {
-  text-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+  text-shadow: 0 0 20px var(--spark-30);
 }
 
 /* Card Hover Glow */
 .feature-card:hover,
 .world-card:hover,
 .tool-card:hover {
-  box-shadow: 0 8px 30px var(--shadow-deep), 0 0 20px rgba(255, 107, 157, 0.2);
+  box-shadow: 0 8px 30px var(--shadow-deep), 0 0 20px var(--spark-20);
 }
 
 /* Smooth Page Transitions */
